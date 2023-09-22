@@ -1,0 +1,497 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-26 16:57+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=((n%10 == 1) && (n%100 != 11) && (n%100 !"
+"=71) && (n%100 !=91) ? 0 :(n%10 == 2) && (n%100 != 12) && (n%100 !=72) && (n"
+"%100 !=92) ? 1 :(n%10 ==3 || n%10==4 || n%10==9) && (n%100 < 10 || n% 100 > "
+"19) && (n%100 < 70 || n%100 > 79) && (n%100 < 90 || n%100 > 99) ? 2 :(n != 0 "
+"&& n % 1000000 == 0) ? 3 : 4);\n"
+
+#: .\account\templates\chooselanguage.html:28
+#: .\oldaccount\templates\chooselanguage.html:28
+msgid "my name is Updesh kumar"
+msgstr ""
+
+#: .\account\templates\chooselanguage.html:50
+#: .\account\templates\chooselanguage.html:61
+#: .\oldaccount\templates\chooselanguage.html:50
+#: .\oldaccount\templates\chooselanguage.html:61
+msgid "Choose Languages"
+msgstr ""
+
+#: .\account\templates\otp-verify.html:32
+#: .\oldaccount\templates\otp-verify.html:32
+msgid "Please enter the OTP sent to your"
+msgstr "कृपया आपके भेजल ओटीपी दर्ज करीं"
+
+#: .\account\templates\otp-verify.html:32
+#: .\oldaccount\templates\otp-verify.html:32
+msgid "Change"
+msgstr "बदलल"
+
+#: .\account\templates\otp-verify.html:41
+#: .\oldaccount\templates\otp-verify.html:41
+msgid "Enter OTP"
+msgstr "ओटीपी दर्ज करीं"
+
+#: .\account\templates\otp-verify.html:49
+#: .\oldaccount\templates\otp-verify.html:49
+msgid "Verify"
+msgstr "सत्यापित करीं"
+
+#: .\account\templates\otp-verify.html:53
+#: .\oldaccount\templates\otp-verify.html:53
+msgid "Not received your code"
+msgstr "राउर कोड ना मिलल"
+
+#: .\account\templates\otp-verify.html:53
+#: .\oldaccount\templates\otp-verify.html:53
+msgid "Resend Code"
+msgstr "कोड के दोबारा भेजल जाला"
+
+#: .\account\templates\profile.html:32 .\oldaccount\templates\profile.html:32
+msgid "Asiyai Hevay Vehicle "
+msgstr ""
+
+#: .\account\templates\profile.html:47 .\oldaccount\templates\profile.html:47
+msgid "Updesh kumar"
+msgstr ""
+
+#: .\account\templates\profile.html:51 .\oldaccount\templates\profile.html:51
+msgid "Sign out"
+msgstr ""
+
+#: .\account\templates\profile.html:76 .\oldaccount\templates\profile.html:76
+msgid "Heavy Vehicle"
+msgstr ""
+
+#: .\account\templates\profile.html:87 .\oldaccount\templates\profile.html:87
+msgid "Driver/Operator"
+msgstr ""
+
+#: .\account\templates\profile.html:98 .\oldaccount\templates\profile.html:98
+msgid "Sub Contractor"
+msgstr ""
+
+#: .\account\templates\profile.html:109 .\oldaccount\templates\profile.html:109
+msgid "Labour Contractor"
+msgstr ""
+
+#: .\account\templates\profile.html:120 .\oldaccount\templates\profile.html:120
+msgid "Normal User"
+msgstr ""
+
+#: .\account\templates\profile.html:144 .\oldaccount\templates\profile.html:144
+msgid "Copyright"
+msgstr ""
+
+#: .\account\templates\profile.html:144 .\oldaccount\templates\profile.html:144
+msgid "&copy;"
+msgstr ""
+
+#: .\account\templates\profile.html:144 .\oldaccount\templates\profile.html:144
+msgid "Asiyai Hevay Vehicle"
+msgstr ""
+
+#: .\account\templates\profile.html:144 .\oldaccount\templates\profile.html:144
+msgid "All rights reserved."
+msgstr ""
+
+#: .\account\templates\send-otp.html:40 .\oldaccount\templates\send-otp.html:40
+msgid "Enter Mobile Number"
+msgstr "मोबाइल नंबर दर्ज करीं"
+
+#: .\account\templates\send-otp.html:48 .\oldaccount\templates\send-otp.html:49
+msgid "CONTINUE"
+msgstr "चालू रखे"
+
+#: .\account\templates\update.html:40 .\oldaccount\templates\update.html:40
+#: .\vehicle_owner\templates\vehicle-address.html:42
+msgid "Address"
+msgstr "पता"
+
+#: .\account\templates\vehicle-update.html:48
+#: .\account\templates\vehicle-update.html:50
+#: .\driver\templates\driver-register.html:48
+#: .\driver\templates\driver-register.html:49
+#: .\driver\templates\driver-update.html:48
+#: .\driver\templates\driver-update.html:49
+#: .\oldaccount\templates\vehicle-update.html:48
+#: .\oldaccount\templates\vehicle-update.html:50
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:48
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:49
+msgid "Vehicle Name"
+msgstr "वाहन के नाम बा"
+
+#: .\account\templates\vehicle-update.html:54
+#: .\account\templates\vehicle-update.html:56
+#: .\oldaccount\templates\vehicle-update.html:54
+#: .\oldaccount\templates\vehicle-update.html:56
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:53
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:54
+msgid "Model Name"
+msgstr "मॉडल के नाम बा"
+
+#: .\account\templates\vehicle-update.html:61
+#: .\account\templates\vehicle-update.html:62
+#: .\oldaccount\templates\vehicle-update.html:61
+#: .\oldaccount\templates\vehicle-update.html:62
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:59
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:60
+msgid "Manufacturing Year"
+msgstr "मैन्युफैक्चरिंग के साल के बा"
+
+#: .\account\templates\vehicle-update.html:66
+#: .\account\templates\vehicle-update.html:67
+#: .\oldaccount\templates\vehicle-update.html:66
+#: .\oldaccount\templates\vehicle-update.html:67
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:63
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:64
+msgid "Vehicle Registration Number"
+msgstr "वाहन रजिस्ट्रेशन नंबर के बा"
+
+#: .\account\templates\vehicle-update.html:73
+#: .\account\templates\vehicle-update.html:74
+#: .\oldaccount\templates\vehicle-update.html:73
+#: .\oldaccount\templates\vehicle-update.html:74
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:69
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:70
+msgid "Company Name"
+msgstr "कंपनी के नाम बा"
+
+#: .\account\templates\vehicle-update.html:78
+#: .\account\templates\vehicle-update.html:79
+#: .\oldaccount\templates\vehicle-update.html:78
+#: .\oldaccount\templates\vehicle-update.html:79
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:73
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:74
+msgid "Owner Name"
+msgstr "मालिक के नाम बा"
+
+#: .\account\templates\vehicle-update.html:142
+#: .\driver\templates\driver-update.html:120
+#: .\labour_contructor\templates\labour-contructor-update.html:139
+#: .\oldaccount\templates\vehicle-update.html:142
+#: .\sub_contructor\templates\subcontructor-update.html:132
+msgid "Update"
+msgstr ""
+
+#: .\df_user\templates\defaultuser_register.html:39
+msgid "Normal User Registration"
+msgstr "सामान्य उपयोगकर्ता पंजीकरण के बारे में बतावल गइल बा"
+
+#: .\df_user\templates\defaultuser_register.html:46
+#: .\df_user\templates\defaultuser_register.html:47
+msgid "User Name"
+msgstr "प्रयोगकर्ता के नाम बा"
+
+#: .\df_user\templates\defaultuser_register.html:49
+#: .\vehicle_owner\templates\vehicle-address.html:78
+msgid "Previous"
+msgstr "पिछिला"
+
+#: .\df_user\templates\defaultuser_register.html:50
+#: .\driver\templates\driver-register.html:111
+#: .\labour_contructor\templates\labour-register.html:148
+#: .\sub_contructor\templates\subcon_register.html:118
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:138
+#: .\vehicle_owner\templates\vehicle-address.html:79
+msgid "Next"
+msgstr "अगिला"
+
+#: .\driver\templates\driver-register.html:39
+msgid "Driver Operator Register"
+msgstr "ड्राइवर ऑपरेटर रजिस्टर के बा"
+
+#: .\driver\templates\driver-register.html:52
+#: .\driver\templates\driver-register.html:53
+#: .\driver\templates\driver-update.html:53
+#: .\driver\templates\driver-update.html:54
+msgid "Exprience In Years"
+msgstr "सालन में बा"
+
+#: .\driver\templates\driver-register.html:58
+#: .\driver\templates\driver-register.html:59
+#: .\driver\templates\driver-update.html:61
+#: .\driver\templates\driver-update.html:62
+msgid "Driver Operator Name"
+msgstr "ड्राइवर ऑपरेटर के नाम बा"
+
+#: .\driver\templates\driver-register.html:62
+msgid "Heavy_License"
+msgstr "उधार के बा"
+
+#: .\driver\templates\driver-register.html:72
+#: .\driver\templates\driver-register.html:73
+#: .\labour_contructor\templates\labour-contructor-update.html:116
+#: .\labour_contructor\templates\labour-contructor-update.html:117
+#: .\labour_contructor\templates\labour-register.html:129
+#: .\labour_contructor\templates\labour-register.html:130
+#: .\sub_contructor\templates\subcon_register.html:73
+#: .\sub_contructor\templates\subcon_register.html:74
+msgid "Mobile Number"
+msgstr "मोबाइल नंबर बा"
+
+#: .\driver\templates\driver-register.html:78
+#: .\driver\templates\driver-register.html:79
+#: .\labour_contructor\templates\labour-contructor-update.html:121
+#: .\labour_contructor\templates\labour-contructor-update.html:122
+#: .\labour_contructor\templates\labour-register.html:133
+#: .\labour_contructor\templates\labour-register.html:134
+msgid "Alternet Mobile Number"
+msgstr "अल्टरनेट मोबाइल नंबर के बा"
+
+#: .\driver\templates\driver-register.html:85
+#: .\labour_contructor\templates\labour-register.html:118
+#: .\labour_contructor\templates\labour-register.html:119
+#: .\sub_contructor\templates\subcon_register.html:79
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:93
+msgid "Aadhar Number Front Image"
+msgstr "आधार नंबर के सामने के छवि"
+
+#: .\driver\templates\driver-register.html:92
+#: .\labour_contructor\templates\labour-register.html:122
+#: .\labour_contructor\templates\labour-register.html:123
+#: .\sub_contructor\templates\subcon_register.html:84
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:97
+msgid "Aadhar Number Back Image"
+msgstr "आधार नंबर के पीछे के छवि"
+
+#: .\driver\templates\driver-register.html:99
+#: .\driver\templates\driver-register.html:100
+msgid "Driver_Operator_Image"
+msgstr "ड्राइवर_ऑपरेटर_छवि के बा"
+
+#: .\driver\templates\driver-register.html:103
+msgid "License Image "
+msgstr "लाइसेंस के छवि बा"
+
+#: .\driver\templates\driver-register.html:104
+msgid "License Image"
+msgstr "लाइसेंस के छवि बा"
+
+#: .\driver\templates\driver-register.html:108
+#: .\driver\templates\driver-register.html:109
+#: .\labour_contructor\templates\labour-register.html:144
+#: .\labour_contructor\templates\labour-register.html:145
+#: .\sub_contructor\templates\subcon_register.html:115
+#: .\sub_contructor\templates\subcon_register.html:116
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:87
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:88
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:134
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:135
+msgid "Email-Id"
+msgstr "ईमेल-आईडी के बा"
+
+#: .\labour_contructor\templates\labour-contructor-update.html:48
+#: .\labour_contructor\templates\labour-contructor-update.html:49
+#: .\labour_contructor\templates\labour-register.html:48
+#: .\labour_contructor\templates\labour-register.html:49
+msgid "Labour Contractor Name"
+msgstr "श्रम ठेकेदार के नाम बा"
+
+#: .\labour_contructor\templates\labour-contructor-update.html:54
+#: .\labour_contructor\templates\labour-contructor-update.html:55
+#: .\labour_contructor\templates\labour-register.html:53
+#: .\labour_contructor\templates\labour-register.html:54
+msgid "Lobour(InNumber)"
+msgstr "लोबोर(नंबर में) के बा।"
+
+#: .\labour_contructor\templates\labour-contructor-update.html:61
+#: .\labour_contructor\templates\labour-contructor-update.html:62
+#: .\labour_contructor\templates\labour-register.html:59
+#: .\labour_contructor\templates\labour-register.html:60
+msgid "Labour Work"
+msgstr "श्रम के काम बा"
+
+#: .\labour_contructor\templates\labour-contructor-update.html:67
+#: .\labour_contructor\templates\labour-register.html:64
+msgid "Skilled Labour"
+msgstr "कुशल श्रम के बा"
+
+#: .\labour_contructor\templates\labour-contructor-update.html:69
+#: .\labour_contructor\templates\labour-register.html:66
+msgid "Select option"
+msgstr ""
+
+#: .\labour_contructor\templates\labour-register.html:39
+msgid "Labour Contractor Register"
+msgstr "श्रम ठेकेदार रजिस्टर के बा"
+
+#: .\labour_contructor\templates\labour-register.html:83
+msgid "Unskilled Labour"
+msgstr "अकुशल श्रम के बा"
+
+#: .\labour_contructor\templates\labour-register.html:100
+msgid "Professional Labour"
+msgstr "पेशेवर श्रम के बा"
+
+#: .\labour_contructor\templates\labour-register.html:139
+#: .\labour_contructor\templates\labour-register.html:140
+msgid "Labour_Group_Image"
+msgstr "श्रम_समूह_छवि के बा"
+
+#: .\penal\settings.py:164
+msgid "English"
+msgstr ""
+
+#: .\penal\settings.py:165
+msgid "hindi"
+msgstr ""
+
+#: .\penal\settings.py:166
+msgid "Kannada"
+msgstr ""
+
+#: .\penal\settings.py:167
+msgid "Marathi"
+msgstr ""
+
+#: .\penal\settings.py:168
+msgid "भोजपुरी"
+msgstr ""
+
+#: .\penal\urls.py:11
+msgid "admin/"
+msgstr ""
+
+#: .\sub_contructor\templates\subcon_register.html:39
+msgid "Sub Contractor Register"
+msgstr "उप ठेकेदार रजिस्टर के बा"
+
+#: .\sub_contructor\templates\subcon_register.html:48
+#: .\sub_contructor\templates\subcon_register.html:49
+#: .\sub_contructor\templates\subcontructor-update.html:48
+#: .\sub_contructor\templates\subcontructor-update.html:49
+msgid "Contractor Name"
+msgstr "ठेकेदार के नाम बा"
+
+#: .\sub_contructor\templates\subcon_register.html:52
+#: .\sub_contructor\templates\subcon_register.html:53
+#: .\sub_contructor\templates\subcontructor-update.html:53
+#: .\sub_contructor\templates\subcontructor-update.html:54
+msgid "Firm Name"
+msgstr "फर्म के नाम बा"
+
+#: .\sub_contructor\templates\subcon_register.html:58
+#: .\sub_contructor\templates\subcon_register.html:59
+#: .\sub_contructor\templates\subcontructor-update.html:60
+#: .\sub_contructor\templates\subcontructor-update.html:61
+msgid "Type Of Work"
+msgstr "काम के प्रकार के बा"
+
+#: .\sub_contructor\templates\subcon_register.html:62
+#: .\sub_contructor\templates\subcon_register.html:63
+#: .\sub_contructor\templates\subcontructor-update.html:65
+#: .\sub_contructor\templates\subcontructor-update.html:66
+msgid "Experience In Years"
+msgstr "अनुभव सालन में बा"
+
+#: .\sub_contructor\templates\subcon_register.html:68
+#: .\sub_contructor\templates\subcon_register.html:69
+#: .\sub_contructor\templates\subcontructor-update.html:72
+#: .\sub_contructor\templates\subcontructor-update.html:73
+msgid "License Number"
+msgstr "उधार के बा"
+
+#: .\sub_contructor\templates\subcon_register.html:91
+msgid "SubContractorWorkingSiteImage"
+msgstr "उपठेकेदारवर्किंगसाइटइमेज के बा"
+
+#: .\sub_contructor\templates\subcon_register.html:92
+msgid "SubContractorImage"
+msgstr "उपठेकेदार के छवि के बा"
+
+#: .\sub_contructor\templates\subcon_register.html:97
+
+msgid "Sub Contractor Working Site Image One"
+msgstr "उप ठेकेदार कार्य स्थल छवि एक बा"
+
+#: .\sub_contructor\templates\subcon_register.html:104
+
+msgid "Sub Contractor  Working Site Image Second"
+msgstr "उप ठेकेदार कार्य स्थल के छवि दूसरा"
+
+#: .\sub_contructor\templates\subcon_register.html:109
+
+msgid "Sub Contractor Back Image Working Site Image Third"
+msgstr "उप ठेकेदार वापस छवि कामकाजी साइट छवि तीसरा"
+
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:40
+
+msgid "Heavy Vehicle Register"
+msgstr "भारी वाहन रजिस्टर के बा"
+
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:79
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:80
+msgid "Alternative Mobile Number"
+msgstr "वैकल्पिक मोबाइल नंबर के बा"
+
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:98
+msgid "Aadhar No Back Image"
+msgstr "आधार ना बैक इमेज"
+
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:104
+msgid "Vehicle Frant Image"
+msgstr "वाहन फ्रांट के छवि के बा"
+
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:105
+#, fuzzy
+msgid "Vehicle Font Image"
+msgstr "गाड़ी के सामने के छवि"
+
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:109
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:110
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:129
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:130
+msgid "Back Vehicle Image"
+msgstr "पीछे के वाहन के छवि"
+
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:117
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:118
+msgid "Right Vehicle Image"
+msgstr "सही वाहन के छवि बा"
+
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:122
+#: .\vehicle_owner\templates\add_heavy_vehicle.html:123
+msgid "Left Vehicle Image"
+msgstr "बाईं ओर वाहन के छवि"
+
+#: .\vehicle_owner\templates\partials\districts.html:6
+#: .\vehicle_owner\templates\partials\districts.html:15
+msgid "Select District"
+msgstr "जिला के चयन करीं"
+
+#: .\vehicle_owner\templates\partials\tehseel.html:5
+#: .\vehicle_owner\templates\partials\tehseel.html:7
+msgid "Select Tehsil"
+msgstr "तहसील के चयन करीं"
+
+#: .\vehicle_owner\templates\vehicle-address.html:51
+#: .\vehicle_owner\templates\vehicle-address.html:60
+msgid "Select State"
+msgstr "राज्य के चयन करीं"
+
+#~ msgid "Sub Contructor Left Image"
+#~ msgstr "उप ठेकेदार बाईं ओर के छवि"
+
+#~ msgid "Sub Contructor Right Image"
+#~ msgstr "उप ठेकेदार सही छवि के बा"
+
+#~ msgid "Sub Contructor Back Image"
+#~ msgstr "उप ठेकेदार के पीछे के छवि"

@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Labour Contractor Register</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Labour Contractor Register</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %} 
+      <div class="container-fluid">
+      
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-dark card-outline">
+              <div class="card-header">
+                <h3 class="card-title font-weight-bold">{% translate "Labour Contractor Register"%}</h3>
+              </div>
+              <div class="card-body">
+               
+                  <div class="bs-stepper-content">
+                    <!-- your steps content here -->
+                    <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="vehicleName" class="font-weight-bold">{% translate "Labour Contractor Name"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <input type="text" class="form-control" id="labourcontractorname" name="name" placeholder="{% translate "Labour Contractor Name"%}" required>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="vehicleNumber" class="font-weight-bold">{% translate "Lobour(InNumber)"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <input type="text" class="form-control" id="lobourinnumber" name="lobourinnumber" placeholder="{% translate "Lobour(InNumber)"%} " required>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="companyName" class="font-weight-bold">{% translate "Labour Work"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <input type="text" class="form-control" id="labourwork" name="labourwork" placeholder="{% translate "Labour Work"%}" required>
+                      </div>
+                        
+                      <div class="form-group">
+                        <label for="vehicleNumber" class="font-weight-bold">{% translate "Skilled Labour"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <select class="form-control" name="skilledlabour" id="skilledlabour">
+                          <option value="">----- {% translate "Select option"%}-----</option>
+                             <option value="10">10  </option>
+                             <option value="20">20  </option>
+                             <option value="30">30 </option>
+                             <option value="40">40  </option>
+                             <option value="50">50  </option>
+                             <option value="60">60  </option>
+                             <option value="70">70  </option>
+                             <option value="80">80  </option>
+                             <option value="90">90  </option>
+                             <option value="100">100  </option>
+                      </select>                            
+                      </div>
+                      </div>
+                      <div class="row">
+                      
+                      <div class="form-group">
+                        <label for="vehicleNumber" class="font-weight-bold">{% translate "Unskilled Labour"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <select class="form-control" name="unskilledlabour" id="unskilledlabour">
+                          <option value="">----- Select option-----</option>
+                             <option value="10">10  </option>
+                             <option value="20">20  </option>
+                             <option value="30">30 </option>
+                             <option value="40">40  </option>
+                             <option value="50">50  </option>
+                             <option value="60">60  </option>
+                             <option value="70">70  </option>
+                             <option value="80">80  </option>
+                             <option value="90">90  </option>
+                             <option value="100">100  </option>
+                      </select>                           
+                      </div>
+
+                      <div class="form-group">
+                        <label for="vehicleNumber" class="font-weight-bold">{% translate "Professional Labour"%}<span class="text-danger required-font-size">*</span></label></label>
+                        <select class="form-control" name="professionallabour" id="professionallabour">
+                          <option value="">----- Select option-----</option>
+                             <option value="10">10  </option>
+                             <option value="20">20  </option>
+                             <option value="30">30 </option>
+                             <option value="40">40  </option>
+                             <option value="50">50  </option>
+                             <option value="60">60  </option>
+                             <option value="70">70  </option>
+                             <option value="80">80  </option>
+                             <option value="90">90  </option>
+                             <option value="100">100  </option>
+                      </select>                      
+                    </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">{% translate "Aadhar Number Front Image"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <input type="file" class="form-control" id="Aadharnumberfrontimage" name="Aadharnumberfrontimage" placeholder={% translate "Aadhar Number Front Image"%} required>
+                      </div>
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">{% translate "Aadhar Number Back Image"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <input type="file" class="form-control" id="Aadharnumberbackimage" name="Aadharnumberbackimage" placeholder={% translate "Aadhar Number Back Image"%} required>
+                      </div>
+                    </div>
+                    <div class="row">
+
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">{% translate "Mobile Number"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <input type="text" class="form-control" id="mobile_number" name="mobile_number" placeholder="{% translate "Mobile Number"%} " required>
+                      </div>
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">{% translate "Alternet Mobile Number"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <input type="text" class="form-control" id="alternativemobilenumber" name="alternativemobilenumber" placeholder="{% translate "Alternet Mobile Number"%}" required>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">{% translate "Labour_Group_Image"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <input type="file" class="form-control" id="labour_image" name="labour_image" placeholder={% translate "Labour_Group_Image"%} multiple required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">{% translate "Email-Id"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <input type="text" class="form-control" id="emailId" name="emailId" placeholder={% translate "Email-Id"%} required>
+                      </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary bg-yellow btn-radius elevation-2" onclick="stepper.next()">{% translate "Next" %}</button>
+                    </div>
+        
+                  </div>
+                </div>
+              
+            
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+
+      </div><!-- /.container-fluid -->
+    </form>
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  {% endblock %}

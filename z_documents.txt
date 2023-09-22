@@ -1,0 +1,28 @@
+### send otp 
+
+endpoint 
+http://127.0.0.1:8000/send-otp/  
+
+payload
+{
+  "mobileNo": "8938019494"
+}
+
+response
+if success
+{
+  "status": false,
+  "data": {
+    "otp": "4882",
+    "message": "4882 is your verification code for AHV App."
+  }
+}
+else
+{
+  "status": true,
+  "data": {
+    "otp": "",
+    "message": ""
+  }
+}
+

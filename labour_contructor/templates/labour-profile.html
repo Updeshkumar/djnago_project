@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block content %}
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">{{request.user.first_name}}</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">User Profile</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Profile Image -->
+                <div class="card card-dark card-outline">
+                    <div class="card-header bg-light d-flex">
+                        <!-- <div class="card-title">
+                            <i class="fas fa-newspaper" style="margin-right: 5px;"></i>
+                            Edit News
+                        </div> -->
+
+                        <div class="mr-auto">
+                          <span class="font-weight-bold">Current Status : </span> 
+                          <span class="badge rounded-pill pt-1 pb-1 pl-3 pr-3 badge-info elevation-1">Active</span>
+                        </div>
+
+                        <div class="ml-auto">
+                          <a class="btn btn-sm btn-primary" href="{% url 'labour_contructor:update_labour_profile' labour.id %}"><i class="nav-icon fas fa-edit" style="margin-right: 5px;"></i>Edit Profile</a>
+                        </div>
+                    </div>
+
+                    <div class="card-body box-profile">
+                        <div class="text-center">
+                            <img class="profile-user-img img-fluid img-circle" src="{{labour.labour_image.url}}" alt="User-Profile-Picture">
+                        </div>
+
+                        <h3 class="profile-username text-center">{{labour.name}}</h3>
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-lg-6 col-md-6">
+                           
+                            <div class="form-group">
+                              <label class="font-weight-bold">Mobile Number : </label>
+                              <label>{{request.user.mobile_number}}</label>
+                            </div>
+                            <div class="form-group">
+                              <label class="font-weight-bold">Labour contractor Name : </label>
+                              <label>{{labour.name}}</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold">Labour in number : </label>
+                                <label>{{labour.lobourinnumber}}</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold">Labour Work : </label>
+                                <label>{{labour.labourwork}}</label>
+                            </div>
+                            <div class="form-group">
+                              <label class="font-weight-bold">Mobile Number  : </label>
+                              <label>{{labour.mobile_number}}</label>
+                            </div>
+                            <div class="form-group">
+                              <label class="font-weight-bold">Payment Status : </label>
+                              <span class="badge rounded-pill pt-1 pb-1 pl-3 pr-3 badge-success elevation-1">Paid</span>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-6">
+                            
+                            <div class="form-group">
+                              <label class="font-weight-bold">Skilled Labour : </label>
+                              <label>{{labour.skilledlabour}}</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold">Unskilled Labour  : </label>
+                                <label>{{labour.unskilledlabour}}</label>
+                            </div>
+                            <div class="form-group">
+                              <label class="font-weight-bold">Professional Labour  : </label>
+                              <label>{{labour.professionallabour}}</label>
+                            </div>
+                            <div class="form-group">
+                              <label class="font-weight-bold">Alternate Mobile Number  : </label>
+                              <label>{{labour.alternativemobilenumber}}</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="font-weight-bold">Expired  Date : </label>
+                                <label>{{labour.expired_at}}</label>
+                            </div>
+                           
+                          
+                          </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="card card-dark card-outline">
+                    <div class="card-header bg-light">
+                        <i class="fas fa-image" style="margin-right: 5px;"></i>
+                        Aadhar Card Front Side
+                    </div>
+
+                    <div class="card-body">
+                        <div class="image-aspect">
+                            <img src="{{labour.Aadharnumberfrontimage.url}}" width="100%" height="100%" class="img-responsive rounded" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="card card-dark card-outline">
+                    <div class="card-header bg-light">
+                        <i class="fas fa-image" style="margin-right: 5px;"></i>
+                        Aadhar Card Back Side
+                    </div>
+
+                    <div class="card-body">
+                        <div class="image-aspect">
+                            <img src="{{labour.Aadharnumberbackimage.url}}" width="100%" height="100%" class="img-responsive rounded" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="card card-dark card-outline">
+                    {% comment %} <div class="card-header bg-light">
+                        <i class="fas fa-image" style="margin-right: 5px;"></i>
+                        Labour Image
+                    </div>
+
+                    <div class="card-body">
+                        <div class="image-aspect">
+                            <img src="{{labour.labour_image.url}}" width="100%" height="100%" class="img-responsive rounded" alt="image">
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+
+           
+        </div>
+        <!-- /.row -->
+
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+{% endblock %}

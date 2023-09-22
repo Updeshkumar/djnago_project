@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+    {% get_current_language as LANGUAGE_CODE %}
+    {% get_available_languages as LANGUAGES %}
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Driver Operator Update Profile</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Driver Operator Update Profile</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %} 
+      <div class="container-fluid">
+      
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-dark card-outline">
+              <div class="card-header">
+                <h3 class="card-title font-weight-bold">Driver Operator Update Profile</h3>
+              </div>
+              <div class="card-body">
+               
+                  <div class="bs-stepper-content">
+                    <!-- your steps content here -->
+                    <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="vehicleName" class="font-weight-bold">{% translate "Vehicle Name" %}<span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="vehicalname" name="vehicalname" placeholder="{% translate "Vehicle Name" %}" required>-->
+                        {{form.vehicalname}}
+                      </div>
+                      <div class="form-group">
+                        <label for="companyName" class="font-weight-bold">{%translate "Exprience In Years"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="expriencesinyear" name="expriencesinyear" placeholder="{%translate "Exprience In Years"%}" required>-->
+                      {{form.expriencesinyear}}
+                      
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="form-group">
+                        <label for="vehicleNumber" class="font-weight-bold">{% translate "Driver Operator Name"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="driveroperatorname" name="driveroperatorname" placeholder="{% translate "Driver Operator Name"%}" required>-->
+                       {{form.driveroperatorname}}
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">Aadhar Number Front Image <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="file" class="form-control" id="Aadharnumberfrontimage" name="Aadharnumberfrontimage" placeholder="Aadhar No Front Image" required>-->
+                      {{form.Aadharnumberfrontimage}}
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">Aadhar Number Back Image <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="file" class="form-control" id="Aadharnumberbackimage" name="Aadharnumberbackimage" placeholder="Aadhar No Back Image" required>-->
+                      {{form.Aadharnumberbackimage}}
+                      </div>
+                      
+                      
+                      <div class="form-group">
+                        <label for="ownerName" class="font-weight-bold">Mobile Number <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Alternet Mobile Number" required>-->
+                      {{form.mobilenumber}}
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="form-group">
+                        <label for="ownerName" class="font-weight-bold">Alternet Mobile Number <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="alternet_mobilenumber" name="alternet_mobilenumber" placeholder="Alternet Mobile Number" required>-->
+                      {{form.alternet_mobilenumber}}
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="state" class="font-weight-bold">Heavy_License <span class="text-danger required-font-size">*</span></label>
+                          <!--<select class="form-control" name="heavy_license" id="heavy_license">-->
+                          <!--    <option value="">----- Select Option-----</option>-->
+                          <!--        <option value="Yes">Yes</option>-->
+                          <!--        <option value="No">No</option>-->
+                          <!--</select>-->
+                      {{form.heavy_license}}
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">Driver_Operator_Image <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="file" class="form-control" id="driver_image" name="driver_image" placeholder="Driver_Operator_Image" required>-->
+                      {{form.driver_image}}
+                      </div>
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">License Image <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="file" class="form-control" id="license_image" name="license_image" placeholder="License Image" required>-->
+                      {{form.license_image}}
+                      </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">Email-Id <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="emailId" name="emailId" placeholder="Email-Id" required>-->
+                        {{form.emailId}}
+                      </div>
+                      <button type="submit" class="btn btn-primary bg-yellow btn-radius elevation-2" onclick="stepper.next()">{% translate "Update"%}</button>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+
+      </div><!-- /.container-fluid -->
+    </form>
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  {% endblock %}

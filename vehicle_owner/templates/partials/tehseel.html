@@ -1,0 +1,12 @@
+
+{% load i18n %}
+
+<div class="form-group">
+    <label for="districts" class="font-weight-bold">{% translate "Select Tehsil"%}<span class="text-danger required-font-size">*</span></label>
+    <select class="form-control" name="tehsil_id" id="dpdlCity">
+        <option value="select">{% translate "Select Tehsil"%}</option>
+        {% for s in tehsils %}
+            <option value="{{s.id}}">{{s.tahseel_name}}</option>
+        {% endfor %}
+    </select>
+</div>

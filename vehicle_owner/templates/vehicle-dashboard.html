@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block content %}
+
+<style>
+    .row{
+        justify-content:start!important;
+    }
+</style>
+
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Heavy Vehicles  
+              <a href="{% url 'vehicle_owner:add_vehicle_view'  %}" class="btn btn-sm btn-primary">Add More Vehicle</a>
+            </h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Heavy Vehicles</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- Heavy Vehicles -->
+            <div class="row">
+                {% for i in vehicles %}
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="image-aspect">
+                              {% if i.vehicle_image %}
+                                <img src="{{i.vehicle_image.url}}" class="card-img-top" alt="...">
+                              {% else %}
+                              <img src="" class="card-img-top" alt="...">
+                              {% endif %}
+                            </div>
+                            
+                            <div class="card-body">
+                                  <h5 class="card-title font-weight-bold">Vehicle Name : {{i.vehical_name}}</h5>
+                                  <p class="card-text mb-0">Model Name : {{i.vehiclemodelnumber}}</p>
+                                  <p class="card-text mb-0">Manufectoring Year : {{i.manufacture_date}}</p>
+                                  {% for address in i.vehicleaddress.all %}
+                                    <p class="card-text mb-0">Location:{{address.state_id}}-{{address.district_id}}</p>
+                                  
+                                  {% if not  i.is_paid %}  
+                                  <a href="{% url 'vehicle_owner:vehicle_making_payment' i.id %}">Pay Now</a>  
+                                  {% endif %}
+                                  
+                                  
+                                  {% empty %}
+                                      <a href="{% url 'vehicle_owner:add_heavy_address' i.id %}">Add Adress Now</a>  
+                                     
+                                  {% endfor %}
+                                  
+                                  <strong><p class="card-text mb-0 "> Vehicle Expired at :  {{i.expired_at}} </p></strong> 
+                                  <!--<small> <p class="card-text mb-0"> Vehicle Expired at : <strong> {{i.expired_at}} <strong> </p><small>-->
+                                  <!-- <p class="card-text font-weight-bold">Aadhar Number : {{i.Aadhar_number}}</p> -->
+                                  <a href="{% url 'vehicle_owner:vehicle_view' i.id%}" class="btn btn-sm btn-success elevation-2 mt-3">View More</a>
+                                  <a href="{% url 'vehicle_owner:update_vehicle' i.id %}" class="btn btn-sm btn-success elevation-2 mt-3 float-right">Edit</a>
+                            </div >
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+              <div class="col-12">
+                  <ul class="pagination pagination-md justify-content-center">
+                      <li class="page-item"><a href="#" class="page-link my-link">&laquo;</a></li>
+                      <li class="page-item my-active"><a href="#" class="page-link my-link">1</a></li>
+                      <li class="page-item"><a href="#" class="page-link my-link">2</a></li>
+                      <li class="page-item"><a href="#" class="page-link my-link">3</a></li>
+                      <li class="page-item"><a href="#" class="page-link my-link">&raquo;</a></li>
+                  </ul>
+              </div>
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div> <!-- /.content -->
+</div><!-- ./content-wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="js/adminlte.js"></script>
+
+</body>
+</html>
+
+
+{% endblock %}

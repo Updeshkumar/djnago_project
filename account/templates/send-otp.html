@@ -1,0 +1,73 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AHV | Registration With Mobile Number</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/static/css/adminlte.css">
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="/static/css/mystyle.css">
+</head>
+
+<body class="hold-transition register-page" style="background-image: url('{% static "/images/index.jpeg"%}'); background-size: auto; background-repeat: no-repeat;  background-size: cover;">
+<!-- <div class="wrapper" style="padding-top:100px;"> -->
+<div class="register-box">
+    <div class="card card-outline card-primary card-bg card-outline-yellow">
+        <div class="card-header card-header-bottom logo text-center">
+          {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+            <a href="#" target="_blank">
+                <img src="/static/images/logo.png" alt="ahv-logo" class="img-fluid">
+            </a>
+        </div>
+        <div class="card-body">
+            {% for msg in messages %}
+              <h5 class="my-text-light">{{msg}}</h5>
+            {% endfor %}
+            <form method="POST">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                  <input type="tel" id="input1" class="form-control custom-form-control caret-style" name="mobileNo" placeholder="{% translate 'Enter Mobile Number' %}">
+                  <div class="input-group-append">
+                    <div class="input-group-text custom-input-group-text">
+                        <span class="fas fa-phone-alt"></span>
+                    </div>
+                  </div>
+                </div>
+                
+                <button type="submit" id="" class="btn btn-block btn-yellow">{% translate "CONTINUE" %}</button>
+            </form>
+        </div>
+        <div class="card-footer text-light">
+            <span>Copyright &copy; 2022</span>&nbsp;<strong><a class="text-yellow">Asiyai Hevay Vehicle Private Limited</a></strong> Version 1.0 All rights reserved.
+        </div>
+        <!-- /.card -->
+    </div>
+</div>
+</div>
+
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<script>
+  document.getElementById('input1').focus();
+</script>
+
+
+</body>
+</html>

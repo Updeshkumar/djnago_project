@@ -1,0 +1,20 @@
+
+{% load i18n %}
+
+
+<div class="form-group">
+    <label for="districts" class="font-weight-bold">{% translate "Select District"%}
+        <span class="text-danger required-font-size">*</span>
+    </label>
+    <select 
+    hx-get="{% url 'vehicle_owner:get_tehsils' %}"
+    hx-trigger="change"
+    hx-target="#tehsils"
+    class="form-control" 
+    name="district_id">
+    <option value="select">{% translate "Select District"%}</option>
+        {% for s in districts %}
+            <option value="{{s.id}}">{{s.district_name}}</option>
+        {% endfor %}
+    </select>
+</div>
