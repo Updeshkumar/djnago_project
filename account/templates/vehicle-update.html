@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+
+<!-- AdminLTE App -->
+<script src="/static/js/adminlte.js"></script> <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0">Heavy Vehicle Update Profile</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home<a/></li>
+                  {% comment %} <button type="" name="button">Home</button> {% endcomment %}
+                <li class="breadcrumb-item active"> / Heavy Vehicle Update Profile</li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+      <!-- Main content -->
+      <div class="content">
+        <form action="" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-dark card-outline">
+                <div class="card-header">
+                  <h3 class="card-title font-weight-bold">Heavy Vehicle Update Profile</h3>
+                </div>
+                <div class="card-body">
+                    <div class="bs-stepper-content">
+                      <!-- your steps content here -->
+                      <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
+                      <div class="row">
+                        <div class="form-group">
+                          <label for="vehicleName" class="font-weight-bold">{% translate "Vehicle Name"%} <span class="text-danger required-font-size">*</span></label></label>
+                          {{form.vehical_name}}
+                          <!--<input type="text" class="form-control" id="vehical_name" name="vehical_name" placeholder="{% translate "Vehicle Name" %}"required>-->
+                        </div>
+                  
+                        <div class="justify-content-inline form-group">
+                          <label for="vehicleNumber" class="font-weight-bold">{% translate "Model Name"%} <span class="text-danger required-font-size">*</span></label></label>
+                          {{form.vehiclemodelnumber}}
+                          <!--<input type="text" class="form-control" id="vehiclemodelnumber" name="vehiclemodelnumber" placeholder="{%translate "Model Name"%}" required>-->
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <label for="mfgDate" class="font-weight-bold">{% translate "Manufacturing Year"%} <span class="text-danger required-font-size">*</span></label></label>
+                          <!--<input type="date" class="form-control" id="manufacture_date" name="manufacture_date" placeholder={% translate "Manufacturing Year"%} required>-->
+                        {{form.manufacture_date}}
+                        </div>
+                        <div class="form-group">
+                          <label for="aadharNumber" class="font-weight-bold">{% translate "Vehicle Registration Number"%} <span class="text-danger required-font-size">*</span></label></label>
+                          <!--<input type="text" class="form-control" id="vehicleregistrationnumber" name="vehicleregistrationnumber" placeholder="{% translate "Vehicle Registration Number"%}" required>-->
+                        {{form.vehicleregistrationnumber}}
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <label for="companyName" class="font-weight-bold">{% translate "Company Name"%}<span class="text-danger required-font-size">*</span></label></label>
+                          <!--<input type="text" class="form-control" id="company_name" name="company_name" placeholder="{% translate "Company Name"%}" required>-->
+                        {{form.company_name}}
+                        </div>
+                        <div class="form-group">
+                          <label for="ownerName" class="font-weight-bold">{% translate "Owner Name"%} <span class="text-danger required-font-size">*</span></label></label>
+                          <!--<input type="text" class="form-control" id="ownername" name="ownername" placeholder="{% translate "Owner Name"%}" required>-->
+                         {{form.ownername}}
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <label for="aadharNumber" class="font-weight-bold">Aadhar Number Front Image <span class="text-danger required-font-size">*</span></label></label>
+                          <!--<input type="file" class="form-control" id="Aadharnumberfrontimage" name="Aadharnumberfrontimage" placeholder="Aadhar No Front Image" required>-->
+                        {{form.Aadharnumberfrontimage}}
+                        </div>
+                        <div class="form-group">
+                          <label for="aadharNumber" class="font-weight-bold">Aadhar Number Back Image <span class="text-danger required-font-size">*</span></label></label>
+                          <!--<input type="file" class="form-control" id="Aadharnumberbackimage" name="Aadharnumberbackimage" placeholder="Aadhar No Back Image" multiple required>-->
+                        {{form.Aadharnumberbackimage}}
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <label for="modelNumber" class="font-weight-bold">Alternative Mobile Number <span class="text-danger required-font-size">*</span></label></label>
+                          <!--<input type="text" class="form-control" id="alternativemobilenumber" name="alternativemobilenumber" placeholder="Alternative Mobile Number" required>-->
+                        {{form.alternativemobilenumber}}
+                        </div>
+                        
+                        <!-- <div class="form-group">
+                          <label for="vehicle_image" class="font-weight-bold">Vehicle_Image <span class="text-danger required-font-size">*</span></label></label>
+                          <input type="file" class="form-control" id="vehicle_image" name="vehicle_image" placeholder="Vehicle_image" multiple>
+                        </div> -->
+                        <div class="form-group">
+                          <input type="hidden" name="fileType" value="your_file_type_here">
+                          <label for="vehicle_image" class="font-weight-bold">Vehicle Image <span class="text-danger required-font-size">*</span></label></label>
+                          <!--<input type="file" class="form-control" id="images" name="vehicle_image" placeholder="More Vehicle Images" required multiple>-->
+                        {{form.vehicle_image}}
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <input type="hidden" name="fileType" value="your_file_type_here">
+                          <label for="vehicle_image" class="font-weight-bold">Left Vehicle Image <span class="text-danger required-font-size">*</span></label></label>
+                          <!--<input type="file" class="form-control" id="images" name="vehicle_image_left" placeholder="More Vehicle Images" required multiple>-->
+                         {{form.vehicle_image_left}}
+                        </div>
+                        <div class="form-group">
+                          <input type="hidden" name="fileType" value="your_file_type_here">
+                          <label for="vehicle_image" class="font-weight-bold">Right Vehicle Image <span class="text-danger required-font-size">*</span></label></label>
+                          <!--<input type="file" class="form-control" id="images" name="vehicle_image_right" placeholder="More Vehicle Images" required multiple>-->
+                        {{form.vehicle_image_right}}
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <input type="hidden" name="fileType" value="your_file_type_here">
+                          <label for="vehicle_image" class="font-weight-bold">Back Vehicle Image <span class="text-danger required-font-size">*</span></label></label>
+                          <!--<input type="file" class="form-control" id="images" name="vehicle_image_back" placeholder="More Vehicle Images" required multiple>-->
+                         {{form.vehicle_image_back}}
+
+                        </div>
+
+                        <div class="form-group">
+                          <label for="aadharNumber" class="font-weight-bold">Email-Id</label>
+                          <!--<input type="text" class="form-control" id="emailId" name="emailId" placeholder="Email-Id" required>-->
+                           {{form.emailId}}
+                        </div>
+                      </div>
+                        <button type="submit" class="btn btn-primary bg-yellow btn-radius elevation-2">{% translate "Update"%}</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+          <!-- /.row -->
+
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content -->
+    </div>
+</from>
+  <!-- /.content-wrapper -->
+{% endblock %}

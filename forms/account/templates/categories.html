@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block content %}
+
+ 
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Categories</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Categories</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+
+        <!-- Heavy Vehicles -->
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Heavy Vehicles -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card card-dark card-outline">
+                            <div class="card-header font-weight-bold d-flex">
+                                All Categories
+                            </div>
+                            <div class="card-body justify-content-center">
+                                <a class="btn">
+                                    <div class="widget-category">
+                                        <div class="widget-category-image">
+                                            <img class="img-circle elevation-2" src="/static/images/categories/excavator.png" alt="...">
+                                        </div>
+                                    </div>
+                                    <a href ="{% url 'account:vehicels_all_view' %}" class="font-weight-bold mt-1">Heavy Vehicles</a>
+                                </a>
+
+                                <a class="btn">
+                                    <div class="widget-category">
+                                        <div class="widget-category-image">
+                                            <img class="img-circle elevation-2" src="/static/images/categories/construction-worker.png" alt="...">
+                                        </div>
+                                    </div>
+                                    <a href="{% url 'account:drivers_all_view' %}" class="font-weight-bold mt-1">Driver/Operator</a>
+                                </a>
+
+                                <a class="btn">
+                                    <div class="widget-category">
+                                        <div class="widget-category-image">
+                                            <img class="img-circle elevation-2" src="/static/images/categories/workers.png" alt="...">
+                                        </div>
+                                    </div>
+                                    <a href="{% url 'account:subcontructor_all_view' %}" class="font-weight-bold mt-1">Sub Contractor</a>
+                                </a>
+
+                                <a class="btn">
+                                    <div class="widget-category">
+                                        <div class="widget-category-image">
+                                            <img class="img-circle elevation-2" src="/static/images/categories/taxi-driver.png" alt="...">
+                                        </div>
+                                    </div>
+                                    <a href="{% url 'account:labour_all_view' %}" class="font-weight-bold mt-1">Labour Contractor</a>
+                                </a>
+
+                                <!-- <a class="btn">
+                                    <div class="widget-category">
+                                        <div class="widget-category-image">
+                                            <img class="img-circle elevation-2" src="/static/images/categories/helmet.png" alt="...">
+                                        </div>
+                                    </div>
+                                    <p class="font-weight-bold mt-1">Other Equipments</p>
+                                </a> -->
+                            </div>
+                        </div><!-- /.card -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                    
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="/static/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/static/js/adminlte.js"></script>
+
+{% endblock %}

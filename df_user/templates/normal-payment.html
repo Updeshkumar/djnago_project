@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block content %}
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Normal User Details</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Nonrmal User Details</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Profile Image -->
+            <div class="card card-dark card-outline">
+                <div class="card-header bg-light d-flex">
+                    <div class="card-title">
+                        <i class="fas fa-list" style="margin-right: 5px;"></i>
+                        Normal User Details Preview
+                    </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <tbody>
+                        <tr>
+                          <td class="font-weight-bold" style="width: 250px">User Name</td>
+                          <td>{{dfuser.name}}</td>
+                          <td class="font-weight-bold" style="width: 250px">Payment Status</td>
+                          <td colspan="2"><span class="badge rounded-pill pt-1 pb-1 pl-3 pr-3 badge-danger elevation-1">Pending</span></td>
+                       
+                        
+                          <!--<td rowspan="4">-->
+                          <!--  <div class="user-avatar mx-auto">  -->
+                          <!--    <img src="{{dfuser.driver_image.url}}" alt="user-avatar">-->
+                          <!--  </div>-->
+                          <!--</td>-->
+                        </tr>
+                        {% for a in dfuser.normalAddress.all %}
+                        <tr>
+                          <td class="font-weight-bold" style="width: 250px">State</td>
+                          <td>{{a.state_id.state_name}}</td>
+                          <td class="font-weight-bold" style="width: 250px">District</td>
+                          <td colspan="2">{{a.district_id}}</td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold" style="width: 250px">Tehsil</td>
+                          <td colspan="4">{{a.tahseel_id}}</td>
+                        </tr>
+                        
+                        {% endfor %}
+                        <tr>
+                          <td colspan="5">
+                            <!--<a href="#" class="btn btn-danger pl-4 pr-4"><i class="nav-icon fas fa-arrow-circle-left mr-2"></i>Back</a>-->
+                            <a href="{{url}}"  class="btn btn-success pl-4 pr-4 float-right" id="pay-btn"><i class="nav-icon fas fa-rupee-sign ml-2"></i> Pay Now {{amount}}</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="js/adminlte.js"></script>
+
+<script>
+    var $owl = $('.owl-carousel');
+
+    $owl.children().each( function( index ) {
+        $(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
+    });
+
+    $owl.owlCarousel({
+        center: true,
+        loop: true,
+        dots: true,
+        slideTransition: 'linear',
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplaySpeed: 500,
+        items: 3,
+        responsive: {
+        0: {
+          items: 1,
+          nav: false,
+          loop: true,
+        },
+        600: {
+          items: 2,
+          nav: false,
+          loop: true,
+        },
+        1000: {
+          items: 2,
+          nav: false,
+          loop: true,
+        },
+      },
+    });
+
+    $(document).on('click', '.owl-item>div', function() {
+        var $speed = 500;  //in ms
+        $owl.trigger('to.owl.carousel', [$(this).data( 'position' ), $speed] );
+    });
+</script>
+
+{% comment %} <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+	var options = {
+	
+	// Enter the Key ID generated from the Dashboard
+	key: "{{ razorpay_merchant_key }}",
+	
+	// Amount is in currency subunits.
+	// Default currency is INR. Hence,
+	// 50000 refers to 50000 paise
+	amount: "{{ razorpay_amount }}",
+	currency: "{{ currency }}",
+	
+	// Your/store name.
+	name: "Asaiyi Razorpay",
+	
+	// Pass the `id` obtained in the response of Step 1
+	order_id: "{{ razorpay_order_id }}",
+	
+	callback_url:	"{{ callback_url }}",
+	};
+	
+	// initialise razorpay with the options.
+	var rzp1 = new Razorpay(options);
+	
+	// add event listener to the payment button.
+	document.getElementById("pay-btn").onclick = function (e) {
+	rzp1.open();
+	e.preventDefault();
+	};
+</script> {% endcomment %}
+
+{% endblock %}

@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Sub Contractor Update Profile</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Sub Contractor Update Profile</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %} 
+      <div class="container-fluid">
+      
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-dark card-outline">
+              <div class="card-header">
+                <h3 class="card-title font-weight-bold">Sub Contractor Update Profile</h3>
+              </div>
+              <div class="card-body">
+               
+                  <div class="bs-stepper-content">
+                    <!-- your steps content here -->
+                    <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="vehicleName" class="font-weight-bold">{% translate "Contractor Name"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="contractorname" name="contractorname" placeholder="{% translate "Contractor Name"%}" required>-->
+                      {{form.contractorname}}
+                      </div>
+                      <div class="form-group">
+                        <label for="companyName" class="font-weight-bold">{% translate "Firm Name"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="firmname" name="firmname" placeholder="{% translate "Firm Name"%}" required>-->
+                      {{form.firmname}}
+                      </div>
+                     </div>
+                     <div class="row">
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">{% translate "Type Of Work"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="typeofwork" name="typeofwork" placeholder="{% translate "Type Of Work"%}" required>-->
+                      {{form.typeofwork}}
+                      </div>
+                      <div class="form-group">
+                        <label for="vehicleNumber" class="font-weight-bold">{% translate "Experience In Years"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="expriencesinyear" name="expriencesinyear" placeholder="{% translate "Experience In Years"%}" required>-->
+                       {{form.expriencesinyear}}
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">{% translate "License Number"%} <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="license_number" name="license_number" placeholder="{% translate "License Number"%} " required>-->
+                     {{form.license_number}}
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">Mobile Number <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Mobile Number" required>-->
+                      {{form.mobilenumber}}
+                      </div>
+                     </div>
+                      <div class="row">
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">Aadhar Number Front Image <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="file" class="form-control" id="Aadharnumberfrontimage" name="Aadharnumberfrontimage" placeholder="Aadhar No Front Image" required>-->
+                      {{form.Aadharnumberfrontimage}}
+                      </div>
+                      
+                      
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">Aadhar Number Back Image <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="file" class="form-control" id="Aadharnumberbackimage" name="Aadharnumberbackimage" placeholder="Aadhar No Back Image" required>-->
+                      {{form.Aadharnumberbackimage}}
+                      </div>
+                      </div>
+                     <div class="row">
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">SubContractorWorkingSiteImage <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="file" class="form-control" id="subcontractor_image" name="subcontractor_image" placeholder="SubContractorImage" multiple required>-->
+                      {{form.subcontractor_image}}
+                      </div>
+                     
+
+                      <div class="form-group">
+                        <input type="hidden" name="fileType" value="your_file_type_here">
+                        <label for="vehicle_image" class="font-weight-bold">Sub Contructor Working Site Image One<span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="file" class="form-control" id="images" name="subcontractor_image_left" placeholder="More Vehicle Images" required multiple>-->
+                       {{form.subcontractor_image_left}}
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="form-group">
+                        <input type="hidden" name="fileType" value="your_file_type_here">
+                        <label for="vehicle_image" class="font-weight-bold">Sub Contructor Working Site Image Second <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="file" class="form-control" id="images" name="subcontractor_image_right" placeholder="More Vehicle Images" required multiple>-->
+                       {{form.subcontractor_image_right}}
+                      </div>
+                      <div class="form-group">
+                        <input type="hidden" name="fileType" value="your_file_type_here">
+                        <label for="vehicle_image" class="font-weight-bold">Sub Contructor Working Site Image Third <span class="text-danger required-font-size">*</span></label></label>
+                        <!--<input type="file" class="form-control" id="images" name="subcontractor_image_back" placeholder="More Vehicle Images" required multiple>-->
+                         {{form.subcontractor_image_back}}
+                      </div>
+                    </div>
+                    
+                      <div class="form-group">
+                        <label for="aadharNumber" class="font-weight-bold">Email-Id</label>
+                        <!--<input type="text" class="form-control" id="emailId" name="emailId" placeholder="Email-Id" required>-->
+                      {{form.emailId}}
+                      </div>
+                      <button type="submit" class="btn btn-primary bg-yellow btn-radius elevation-2" onclick="stepper.next()">{% translate "Update"%}</button>
+                    </div>
+        
+                  </div>
+                </div>
+              
+            
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+
+      </div><!-- /.container-fluid -->
+    </form>
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  {% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          
+          <div class="row mb-2">
+           
+            <div class="col-sm-6">
+           
+              <h1 class="m-0">Update</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Update</li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+      <!-- Main content -->
+      <div class="content">
+        <div class="container-fluid">
+          {% get_current_language as LANGUAGE_CODE %}
+          {% get_available_languages as LANGUAGES %}
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-dark card-outline">
+                <div class="card-header">
+                  <h3 class="card-title font-weight-bold">{% translate "Address"%}
+
+                  </h3>
+                </div>
+                <div class="card-body">
+                      <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+                            {{form}}
+                        <button type="submit" class="btn btn-primary bg-yellow btn-radius elevation-2">update</button>
+                      </div>
+                  
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+          <!-- /.row -->
+
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content -->
+    </div>
+</from>
+<script src="static/js/main.js"></script> 
+
+
+{% endblock %}
+
+

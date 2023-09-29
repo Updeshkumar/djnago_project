@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block content %}
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Vehicle Details</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Vehicle Details</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Profile Image -->
+            <div class="card card-dark card-outline">
+                <div class="card-header bg-light d-flex">
+                    <div class="card-title">
+                        <i class="fas fa-list" style="margin-right: 5px;"></i>
+                        Vehicle Details Preview
+                    </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <tbody>
+                        <tr>
+                          <td class="font-weight-bold" style="width: 250px">User Name</td>
+                          <td>{{vehicle.ownername}}</td>
+                          <td class="font-weight-bold" style="width: 250px">Vehicle Model Number</td>
+                          <td>{{vehicle.vehiclemodelnumber}}</td>
+                          <td rowspan="4">
+                            <div class="user-avatar mx-auto">  
+                              <img src="{{vehicle.vehicle_image.url}}" alt="user-avatar">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold" style="width: 250px">Vehicle Name</td>
+                          <td>{{vehicle.vehical_name}}</td>
+                          <td class="font-weight-bold" style="width: 250px">Manufacturing Date</td>
+                          <td>{{vehicle.manufacture_date}}</td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold" style="width: 250px">Company Name</td>
+                          <td>{{vehicle.company_name}}</td>
+                         <td class="font-weight-bold" style="width: 250px">Email Address</td>
+                          <td>{{vehicle.emailId}}</td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold" style="width: 250px">Owner Name</td>
+                          <td>{{vehicle.ownername}}</td>
+                          <td class="font-weight-bold" style="width: 250px">Alternate Mobile Number</td>
+                          <td>{{vehicle.alternativemobilenumber}}</td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold" style="width: 250px">Vehicle Registration Number</td>
+                          <td>{{vehicle.vehicleregistrationnumber}}</td>
+                          <td class="font-weight-bold" style="width: 250px">Payment Status</td>
+                          <td colspan="2"><span class="badge rounded-pill pt-1 pb-1 pl-3 pr-3 badge-danger elevation-1">Pending</span></td>
+                        </tr>
+                        <tr>
+                          
+                        </tr>
+                        {% for a in vehicle.vehicleaddress.all %}
+                        <tr>
+                          <td class="font-weight-bold" style="width: 250px">State</td>
+                          <td>{{a.state_id.state_name}}</td>
+                          <td class="font-weight-bold" style="width: 250px">District</td>
+                          <td colspan="2">{{a.district_id}}</td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold" style="width: 250px">Tehsil</td>
+                          <td colspan="4">{{a.tahseel_id}}</td>
+                        </tr>
+                        <tr>
+                          <td class="font-weight-bold" style="width: 250px; vertical-align: middle;">Aadhar Front Image</td>
+                          <td colspan="2" style="width: 250px">
+                            <div class="image-aspect">
+                              <img src="{{vehicle.Aadharnumberfrontimage.url}}" width="100%" height="100%" class="img-fluid rounded" alt="image">
+                            </div>
+                          </td>
+                         <td class="font-weight-bold" style="width: 250px; vertical-align: middle;">Aadhar Back Image</td>
+
+                          <td colspan="2" style="width: 250px">
+                            <div class="image-aspect">
+                              <img src="{{vehicle.Aadharnumberbackimage.url}}" width="100%" height="100%" class="img-fluid rounded" alt="image">
+                            </div>
+                          </td>
+                        </tr>
+                        <!--<tr>-->
+                        <!--  <td class="font-weight-bold" style="width: 250px; vertical-align: middle;">Vehicle Front Image</td>-->
+                        <!--  <td colspan="2" style="width: 250px">-->
+                        <!--    <div class="image-aspect">-->
+                        <!--      <img src="{{vehicle.vehicle_image.url}}" width="100%" height="100%" class="img-fluid rounded" alt="image">-->
+                        <!--    </div>-->
+                        <!--  </td>-->
+                        <td class="font-weight-bold" style="width: 250px; vertical-align: middle;">Vehicle Right Image</td>
+                          <td colspan="2" style="width: 250px">
+                            <div class="image-aspect">
+                              <img src="{{vehicle.vehicle_image_right.url}}" width="100%" height="100%" class="img-fluid rounded" alt="image">
+                            </div>
+                          </td>
+                        <td class="font-weight-bold" style="width: 250px; vertical-align: middle;">Vehicle Back Image</td>
+
+                          <td colspan="2" style="width: 250px">
+                            <div class="image-aspect">
+                              <img src="{{vehicle.vehicle_image_back.url}}" width="100%" height="100%" class="img-fluid rounded" alt="image">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          
+                          <td class="font-weight-bold" style="width: 250px; vertical-align: middle;">Vehicle Left Image</td>
+
+                          <td colspan="2" style="width: 250px">
+                            <div class="image-aspect">
+                              <img src="{{vehicle.vehicle_image_left.url}}" width="100%" height="100%" class="img-fluid rounded" alt="image">
+                            </div>
+                          </td>
+                        </tr>
+
+                        {% endfor %}
+                        <!--<a href="{% url "vehicle_owner:godashboard" %}"  class="btn btn-success pl-4 pr-4 float-left"> Go Dashboard <i class="nav-icon ml-2"></i></a>-->
+                        <tr>
+                          <td colspan="5">
+                            
+ 
+                            <a href="{{url}}"  class="btn btn-success pl-4 pr-4 float-right" id="pay-btn"> Pay Now <i class="nav-icon fas fa-rupee-sign ml-2"></i> {{amount}}</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  
+
+{% endblock %}
